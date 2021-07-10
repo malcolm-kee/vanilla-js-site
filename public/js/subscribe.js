@@ -13,7 +13,6 @@ const emailInput = document.querySelector('#email-address');
 
 form.addEventListener('submit', (ev) => {
     ev.preventDefault();
-    showNotification();
 
     helpers.signupEmail({
         email: emailInput.value,
@@ -25,4 +24,6 @@ form.addEventListener('submit', (ev) => {
             console.log('signup email error');
         }
     });
+
+    showNotification();
 });
