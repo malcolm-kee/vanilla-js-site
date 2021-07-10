@@ -28,9 +28,20 @@ const helpers = (function () {
     xmlHttp.send('');
   }
 
+  function signupEmail({ email, onSuccess, onError }) {
+    fetch('/api/signup', {
+      method: 'post',
+      body: JSON.stringify({ email })
+    })
+      .then(res => res.json())
+      .then(onSuccess)
+      .catch(onError);
+  }
+
   return {
     getCurrentYear,
     getCurrentDate,
-    getServerTime
+    getServerTime,
+    signupEmail
   };
 })();
