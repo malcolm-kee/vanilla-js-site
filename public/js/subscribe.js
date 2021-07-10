@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 function showNotification() {
     const notification = document.querySelector('#signup-notification');
     // remove 'hidden' class on #signup-notification
